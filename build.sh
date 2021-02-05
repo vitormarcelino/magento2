@@ -1,0 +1,9 @@
+php -d memory_limit=-1 bin/magento maintenance:enable
+#php -d memory_limit=-1 /usr/local/bin/composer install --ignore-platform-reqs
+php -d memory_limit=-1 bin/magento cache:disable
+php -d memory_limit=-1 bin/magento setup:upgrade
+php -d memory_limit=-1 bin/magento setup:di:compile
+php -d memory_limit=-1 bin/magento setup:static-content:deploy pt_BR -f
+php -d memory_limit=-1 bin/magento cache:clean
+php -d memory_limit=-1 bin/magento cache:enable
+php -d memory_limit=-1 bin/magento maintenance:disable
