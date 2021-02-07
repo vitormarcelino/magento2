@@ -1,0 +1,5 @@
+<?php if($block->checkCurrentProductLabelEnable() && !empty($block->getCurrentProductLabel())) : ?>
+<div style="background-color: #00fbff; display: flex; justify-content: center; align-items: center; font-size: 36px;">
+    <span><?php echo $block->getCurrentProductLabel() ?></span>
+</div>
+<?php endif ?>
